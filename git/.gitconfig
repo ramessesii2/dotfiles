@@ -2,5 +2,8 @@
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
 [user]
-	email = sabhardw@redhat.com
+	email = stmbhardwaj@gmail.com
 	name = Satyam Bhardwaj
+
+[includeIf "gitdir:~/Work/redhat"]
+	path = ~/redhat/.gitconfig
