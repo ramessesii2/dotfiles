@@ -227,8 +227,8 @@ autocmd FileType cpp
    \ nnoremap <Leader>rc :w <CR> :!g++ -std=c++17 % && ./a.out <CR>
 
 "templated settings
-source ~/.vim/templates/py_config/py.vim
-source ~/.vim/templates/cpp_config/cp.vim
+"source ~/.vim/templates/py_config/py.vim
+"source ~/.vim/templates/cpp_config/cp.vim
 
 "ale settings for pthon
 let g:ale_linters = {'pthon':['flake8', 'pydocstyle', 'bandit', 'mypy']}
@@ -246,7 +246,7 @@ if has('gui_running')
     if has('gui_win32')
     set guifont=DejaVu_Sans_Mono:h4:cANSI
     else
-        set guifont=Source\ Code\ Pro\ Italic\ 15
+        set guifont=Source\ Code\ Pro\ Italic\ 17
         " set guifont=DejaVu\ Sans\ Mono\ 16
     endif
 endif

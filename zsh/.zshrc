@@ -72,7 +72,6 @@ ZSH_THEME="gozilla"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
 	git
-	zsh-autosuggestions
 	dirhistory
 	history
 	kubectl

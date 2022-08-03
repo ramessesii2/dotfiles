@@ -5,5 +5,5 @@
 	email = stmbhardwaj@gmail.com
 	name = Satyam Bhardwaj
 
-[includeIf "gitdir:~/Work/redhat"]
-	path = ~/redhat/.gitconfig
+[includeIf "gitdir:~/Work/redhat/"]
+	path = ~/dotfiles/git/redhat/.gitconfig
