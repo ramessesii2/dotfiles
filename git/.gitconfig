@@ -7,3 +7,5 @@
 
 [includeIf "gitdir:~/Work/redhat/"]
 	path = ~/dotfiles/git/redhat/.gitconfig
+[init]
+	defaultBranch = main

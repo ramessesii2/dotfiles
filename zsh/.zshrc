@@ -84,7 +84,8 @@ source $ZSH/oh-my-zsh.sh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:/go/bin
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+export PATH=$PATH:~/go/bin
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 # You may need to manually set your language environment
@@ -130,16 +131,20 @@ alias py="python"
 alias g="g++ -std=c++17"
 alias doc="xdg-open"
 
+# fz specifics
 alias fzp=" fzf-tmux -w 70% -h 100% --preview='bat --color=always {}' --bind ctrl-k:preview-up,ctrl-j:preview-down --preview-window up:80%:wrap -x 70"
+# e.g- fzp
 alias fz="fzf --height 80%"
+# e.g.- k get ns | fz
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 
-#eval “$(starship init zsh)”
+# eval “$(starship init zsh)”
 
-#source ~/.zplug/init.zsh
+# source ~/.zplug/init.zsh
 
-#zplug load --verbose
+# zplug load --verbose
 
-#PROMPT='${ret_status}%{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%} %* - %D{%f/%m/%y} % %{$reset_color%}'
+# PROMPT='${ret_status}%{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%} %* - %D{%f/%m/%y} % %{$reset_color%}'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="("
 ZSH_THEME_GIT_PROMPT_SUFFIX=")"
